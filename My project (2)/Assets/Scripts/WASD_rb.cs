@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class WASD_rb : MonoBehaviour
 {
+    //Variables
+    public float forceAmt = 10f;
+    private int i = 8;
+
     // Start is called before the first frame update
     void Start()
     {
