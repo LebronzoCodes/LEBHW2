@@ -13,13 +13,16 @@ public class WASD_rb : MonoBehaviour
 
     private Color defaultColor = Color.red;
 
+    public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         // Find the rigid body on the object this script is on
         rb = GetComponent<Rigidbody2D>();
 
-        
+        // Find the GameManager
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -64,13 +67,22 @@ public class WASD_rb : MonoBehaviour
         {
             //Find Color component and change it.  
             GetComponent<SpriteRenderer>().color = Color.magenta;
-        
+            
+
+
         }
 
         if(collision.transform.tag == "Player 3")
         {
+            //Find Color component and change it.  
             GetComponent<SpriteRenderer>().color = Color.white;
+            
+
+
         }
+        
+        //Score + 1
+        gameManager.sc_num++;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
