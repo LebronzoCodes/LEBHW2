@@ -63,5 +63,10 @@ public class WASD_rb : MonoBehaviour
             GetComponent<SpriteRenderer>().color = Color.magenta;
         
         }
+
+        if(collision.transform.tag == "Player 3")
+        {
+            GetComponent<SpriteRenderer>().color = Color.red;
+        }
     }
 }
