@@ -10,11 +10,13 @@ public class WASD_Tran : MonoBehaviour
     public float speed = 3f;
     public GameObject pl2;
     private bool spawn = true;
+    public GameManager gameManager;
 
     // Awake happens on spawn of an Item
     private void Awake()
     {
         pl2 = this.gameObject;
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -59,7 +61,18 @@ public class WASD_Tran : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Only spawn if true
-        if (spawn) {
+        if (spawn) 
+        {
+        spawn = false;
+            
+            if (collision.transform.tag == "Player")
+            {
+                gameManager.sc_num++;
+            }
+            else if (collision.transform.tag == "Player 3")
+            {
+                gameManager.p3sc_num++;
+            }
             
         var pos = new Vector2(Random.Range(-10f, 10f), Random.Range(-3.3f, 3.3f));
         Instantiate(pl2, pos, Quaternion.identity);

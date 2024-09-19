@@ -11,6 +11,7 @@ public class WASDPT : MonoBehaviour
     private Vector2 movement;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +35,11 @@ public class WASDPT : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       
+        
     }
 }

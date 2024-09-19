@@ -11,7 +11,6 @@ public class WASD_rb : MonoBehaviour
 
     private Color defaultColor = Color.red;
 
-    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +18,6 @@ public class WASD_rb : MonoBehaviour
         // Find the rigid body on the object this script is on
         rb = GetComponent<Rigidbody2D>();
 
-        // Find the GameManager
-        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -79,8 +76,7 @@ public class WASD_rb : MonoBehaviour
 
         }
         
-        //Score + 1
-        gameManager.sc_num++;
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
