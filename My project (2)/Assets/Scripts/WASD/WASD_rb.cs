@@ -7,8 +7,6 @@ public class WASD_rb : MonoBehaviour
     // Variables
     public float forceAmt = 10f;
 
-    private int i = 8;
-
     private Rigidbody2D rb;
 
     private Color defaultColor = Color.red;
