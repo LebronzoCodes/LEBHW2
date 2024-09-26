@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI p3score;
     public int sc_num;
     public int p3sc_num;
+    public bool sceneChange = false;
 
     // Awake is called on spawn of this script before start
     private void Awake()
@@ -49,5 +51,14 @@ public class GameManager : MonoBehaviour
     {
         score.text = "Score: " + sc_num;
         p3score.text = "Score: " + p3sc_num;
+
+    }
+
+    //Create Function to load scenes
+    public void StartGame()
+    {
+        //Either one will lead to game scene. 
+        //SceneManager.LoadScene("Game Scene");
+        SceneManager.LoadScene(1);
     }
 }

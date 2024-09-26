@@ -11,6 +11,8 @@ public class WASD_rb : MonoBehaviour
 
     private Color defaultColor = Color.red;
 
+    private bool sceneChanged = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -75,7 +77,13 @@ public class WASD_rb : MonoBehaviour
 
 
         }
-        
+       
+        if (GameManager.instance.sceneChange == false)
+        {
+            GameManager.instance.sceneChange = true;
+            GameManager.instance.StartGame();
+        }
+       
         
     }
 
