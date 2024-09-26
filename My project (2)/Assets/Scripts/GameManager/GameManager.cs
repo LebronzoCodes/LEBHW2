@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI p3score;
     public int sc_num;
     public int p3sc_num;
-    public bool sceneChange = false;
+    public bool sceneChanged = false;
 
     // Awake is called on spawn of this script before start
     private void Awake()

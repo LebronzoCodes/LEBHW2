@@ -283,6 +283,7 @@ MonoBehaviour:
   p3score: {fileID: 1819332375}
   sc_num: 0
   p3sc_num: 0
+  sceneChanged: 0
 --- !u!4 &693494634
 Transform:
   m_ObjectHideFlags: 0
@@ -295,7 +296,8 @@ Transform:
   m_LocalPosition: {x: 6.984712, y: 2.5877175, z: -0.030001532}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1019415880}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &709551647
@@ -658,7 +660,7 @@ RectTransform:
   m_Children:
   - {fileID: 709551648}
   - {fileID: 1819332374}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 693494634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1368,5 +1370,4 @@ SceneRoots:
   - {fileID: 23802404}
   - {fileID: 113100672}
   - {fileID: 2006285677}
-  - {fileID: 1019415880}
   - {fileID: 693494634}

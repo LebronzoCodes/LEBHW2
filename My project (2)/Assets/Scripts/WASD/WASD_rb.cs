@@ -78,9 +78,9 @@ public class WASD_rb : MonoBehaviour
 
         }
        
-        if (GameManager.instance.sceneChange == false)
+        if (GameManager.instance.sceneChanged == false)
         {
-            GameManager.instance.sceneChange = true;
+            GameManager.instance.sceneChanged = true;
             GameManager.instance.StartGame();
         }
        
