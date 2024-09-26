@@ -5,14 +5,35 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //Variables
+    // Variables
+
+    // Make it a singleton
+
+    public static GameManager instance;
 
     public TextMeshProUGUI score;
     public TextMeshProUGUI p3score;
     public int sc_num;
     public int p3sc_num;
-    
 
+    // Awake is called on spawn of this script before start
+    private void Awake()
+    {
+        /* A singleton must only have one instance, check to make sure this is the only instance
+         * If it is the only instance, make sure it's not destroyed. If it's not, destroy this instance.*/ 
+
+        if (instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+
+    }
     // Start is called before the first frame update
     void Start()
     {
